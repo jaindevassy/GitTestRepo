@@ -9,4 +9,9 @@ export class HelperBase {
   async waitForNumberOfSecs(timeInSecs: number) {
     await this.page.waitForTimeout(timeInSecs * 1000);
   }
+
+  async todayDate() {
+    const currentDate = new Date().toDateString();
+    console.log(currentDate);
+  }
 }
